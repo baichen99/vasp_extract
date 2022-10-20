@@ -65,11 +65,13 @@ def create_dom_with_config(config_dict: dict, output_path: str):
         elif node_type == 'file-list':
             filenames = kwargs.get('filenames', [])
             paths = kwargs.get('paths', [])
+            new_paths = []
             if paths:
                 for path in paths:
                     fname = os.path.split(path)[-1]
                     shutil.copy(path, os.path.join(output_path, fname))
-            return create_file_list_node(name, filenames, paths)
+                    new_paths.append(fname)
+            return create_file_list_node(name, filenames, new_paths)
         elif not data:
             create_empty_node(name)
     dom = traverse(config_dict)
