@@ -1,0 +1,11 @@
+__pycache__/
+
+.DS_Store
+
+__pycache__
+tempCodeRunnerFile.py
+.DS_Store
+!.gitkeep
+test/
+.idea
+outputs/*
