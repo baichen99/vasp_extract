@@ -7,6 +7,25 @@ def optimized_unit_cell_parameters_callback(res_list, **kwargs):
     # '-0.00000000       0.00000000       8.65476744']
     if not res_list:
         return []
+    res_list = [e.text for e in res_list[-1]]
+    data = []
+    for row in res_list:
+        data.append(row.split())
+    return data
+
+def lattice_parameters_callback(res_list, **kwargs):
+    if not res_list:
+        return []
+    res_list = [e.text for e in res_list[-1]]
+    data = []
+    for row in res_list:
+        data.append(row.split())
+    return data
+
+def K_Point_list_callback(res_list, **kwargs):
+    if not res_list:
+        return []
+    res_list = [e.text for e in res_list[-1]]
     data = []
     for row in res_list:
         data.append(row.split())

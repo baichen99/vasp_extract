@@ -15,7 +15,7 @@ def build_config(filename):
                     "zh-name": "计算软件",
                     "tag_name": "Calculation_Software",
                     "type": "uncheck-stringtype",
-                    "default": "vasp",
+                    "default": "VASP",
                     "path": "",
                     "xpath": "",
                     "callback": "",
@@ -26,9 +26,9 @@ def build_config(filename):
                     "tag_name": "Software_version",
                     "type": "uncheck-stringtype",
                     "default": "",
-                    "path": "",
-                    "xpath": "",
-                    "callback": "",
+                    "path": filename,
+                    "xpath": ".//generator/i[@name='version']",
+                    "callback": '',
                     "kwargs": {}
                 },
                 {
@@ -48,7 +48,7 @@ def build_config(filename):
                     "default": "",
                     "path": filename,
                     "xpath": ".//generator/i[@name='date']",
-                    "callback": "",
+                    "callback": '',
                     "kwargs": {}
                 },
                 {
@@ -118,11 +118,198 @@ def build_config(filename):
                             "tag_name": "Iteration_steps",
                             "type": "uncheck-stringtype",
                             "default": "",
-                            "path": "",
-                            "xpath": "",
+                            "path": filename,
+                            "xpath": ".//separator/i[@name='NSW']",
+                            "callback": '',
+                            "kwargs": {}
+                        },
+                        {
+                            "zh-name": "SYSTEM",
+                            "tag_name": "SYSTEM",
+                            "type": "uncheck-stringtype",
+                            "default": "",
+                            "path": filename,
+                            "xpath": ".//incar/i[@name='SYSTEM']",
                             "callback": "",
                             "kwargs": {}
-                        }
+                        },
+                        {
+                            "zh-name": "ISTART",
+                            "tag_name": "ISTART",
+                            "type": "uncheck-stringtype",
+                            "default": "",
+                            "path": filename,
+                            "xpath": ".//incar/i[@name='ISTART']",
+                            "callback": "",
+                            "kwargs": {}
+                        },
+                        {
+                            "zh-name": "PREC",
+                            "tag_name": "PREC",
+                            "type": "uncheck-stringtype",
+                            "default": "",
+                            "path": filename,
+                            "xpath": ".//incar/i[@name='PREC']",
+                            "callback": "",
+                            "kwargs": {}
+                        },
+                        {
+                            "zh-name": "ALGO",
+                            "tag_name": "ALGO",
+                            "type": "uncheck-stringtype",
+                            "default": "",
+                            "path": filename,
+                            "xpath": ".//incar/i[@name='ALGO']",
+                            "callback": "",
+                            "kwargs": {}
+                        },
+                        {
+                            "zh-name": "ISPIN",
+                            "tag_name": "ISPIN",
+                            "type": "uncheck-stringtype",
+                            "default": "",
+                            "path": filename,
+                            "xpath": ".//incar/i[@name='ISPIN']",
+                            "callback": "",
+                            "kwargs": {}
+                        },
+                        {
+                            "zh-name": "ICHARG",
+                            "tag_name": "ICHARG",
+                            "type": "uncheck-stringtype",
+                            "default": "",
+                            "path": filename,
+                            "xpath": ".//incar/i[@name='ICHARG']",
+                            "callback": "",
+                            "kwargs": {}
+                        },
+                        {
+                            "zh-name": "NELM",
+                            "tag_name": "NELM",
+                            "type": "uncheck-stringtype",
+                            "default": "",
+                            "path": filename,
+                            "xpath": ".//incar/i[@name='NELM']",
+                            "callback": "",
+                            "kwargs": {}
+                        },
+                        {
+                            "zh-name": "IBRION",
+                            "tag_name": "IBRION",
+                            "type": "uncheck-stringtype",
+                            "default": "",
+                            "path": filename,
+                            "xpath": ".//incar/i[@name='IBRION']",
+                            "callback": "",
+                            "kwargs": {}
+                        },
+                        {
+                            "zh-name": "EDIFF",
+                            "tag_name": "EDIFF",
+                            "type": "uncheck-stringtype",
+                            "default": "",
+                            "path": filename,
+                            "xpath": ".//incar/i[@name='EDIFF']",
+                            "callback": "",
+                            "kwargs": {}
+                        },
+                        {
+                            "zh-name": "EDIFFG",
+                            "tag_name": "EDIFFG",
+                            "type": "uncheck-stringtype",
+                            "default": "",
+                            "path": filename,
+                            "xpath": ".//incar/i[@name='EDIFFG']",
+                            "callback": "",
+                            "kwargs": {}
+                        },
+                        {
+                            "zh-name": "NSW",
+                            "tag_name": "NSW",
+                            "type": "uncheck-stringtype",
+                            "default": "",
+                            "path": filename,
+                            "xpath": ".//incar/i[@name='NSW']",
+                            "callback": "",
+                            "kwargs": {}
+                        },{
+                            "zh-name": "ISIF",
+                            "tag_name": "ISIF",
+                            "type": "uncheck-stringtype",
+                            "default": "",
+                            "path": filename,
+                            "xpath": ".//incar/i[@name='ISIF']",
+                            "callback": "",
+                            "kwargs": {}
+                        },{
+                            "zh-name": "ENCUT",
+                            "tag_name": "ENCUT",
+                            "type": "uncheck-stringtype",
+                            "default": "",
+                            "path": filename,
+                            "xpath": ".//incar/i[@name='ENCUT']",
+                            "callback": "",
+                            "kwargs": {}
+                        },{
+                            "zh-name": "POTIM",
+                            "tag_name": "POTIM",
+                            "type": "uncheck-stringtype",
+                            "default": "",
+                            "path": filename,
+                            "xpath": ".//incar/i[@name='POTIM']",
+                            "callback": "",
+                            "kwargs": {}
+                        },{
+                            "zh-name": "LREAL",
+                            "tag_name": "LREAL",
+                            "type": "uncheck-stringtype",
+                            "default": "",
+                            "path": filename,
+                            "xpath": ".//incar/i[@name='LREAL']",
+                            "callback": "",
+                            "kwargs": {}
+                        },
+                        {
+                            "zh-name": "ISMEAR",
+                            "tag_name": "ISMEAR",
+                            "type": "uncheck-stringtype",
+                            "default": "",
+                            "path": filename,
+                            "xpath": ".//incar/i[@name='ISMEAR']",
+                            "callback": "",
+                            "kwargs": {}
+                        },
+                        {
+                            "zh-name": "SIGMA",
+                            "tag_name": "SIGMA",
+                            "type": "uncheck-stringtype",
+                            "default": "",
+                            "path": filename,
+                            "xpath": ".//incar/i[@name='SIGMA']",
+                            "callback": "",
+                            "kwargs": {}
+                        },
+                        {
+                            "zh-name": "LWAVE",
+                            "tag_name": "LWAVE",
+                            "type": "uncheck-stringtype",
+                            "default": "",
+                            "path": filename,
+                            "xpath": ".//incar/i[@name='LWAVE']",
+                            "callback": "",
+                            "kwargs": {}
+                        },
+                        {
+                            "zh-name": "LCHARG",
+                            "tag_name": "LCHARG",
+                            "type": "uncheck-stringtype",
+                            "default": "",
+                            "path": filename,
+                            "xpath": ".//incar/i[@name='LCHARG']",
+                            "callback": "",
+                            "kwargs": {}
+                        },
+                        
                     ]
                 },
                 {
@@ -135,7 +322,7 @@ def build_config(filename):
                             "tag_name": "Bravais_lattice",
                             "type": "uncheck-stringtype",
                             "default": "",
-                            "path": "",
+                            "path": '',
                             "xpath": "",
                             "callback": "",
                             "kwargs": {}
@@ -145,9 +332,9 @@ def build_config(filename):
                             "tag_name": "number_of_atoms",
                             "type": "uncheck-stringtype",
                             "default": "",
-                            "path": "",
-                            "xpath": "",
-                            "callback": "",
+                            "path": filename,
+                            "xpath": ".//atominfo/atoms",
+                            "callback": '',
                             "kwargs": {}
                         },
                         {
@@ -155,9 +342,9 @@ def build_config(filename):
                             "tag_name": "number_of_atomic_species",
                             "type": "uncheck-stringtype",
                             "default": "",
-                            "path": "",
-                            "xpath": "",
-                            "callback": "",
+                            "path": filename,
+                            "xpath": ".//atominfo/types",
+                            "callback": '',
                             "kwargs": {}
                         },
                         {
@@ -185,9 +372,9 @@ def build_config(filename):
                             "tag_name": "cutoff_energy",
                             "type": "uncheck-stringtype",
                             "default": "",
-                            "path": "",
-                            "xpath": "",
-                            "callback": "",
+                            "path": filename,
+                            "xpath": ".//incar/ENCUT",
+                            "callback": '',
                             "kwargs": {}
                         },
                         {
@@ -252,9 +439,9 @@ def build_config(filename):
                             "tag_name": "Electronic_iteration_maximum_number_of_steps",
                             "type": "uncheck-stringtype",
                             "default": "",
-                            "path": "",
-                            "xpath": "",
-                            "callback": "",
+                            "path": filename,
+                            "xpath": ".//incar/NELM",
+                            "callback": '',
                             "kwargs": {}
                         },
                         {
@@ -410,9 +597,9 @@ def build_config(filename):
                             "tag_name": "Lattice_parameters",
                             "type": "table",
                             "default": "",
-                            "path": "",
-                            "xpath": "",
-                            "callback": "",
+                            "path": filename,
+                            "xpath": ".//structure[@name='primitive_cell']/crystal/varray[@name='basis']",
+                            "callback": lattice_parameters_callback,
                             "kwargs": {
                                 "columns": [
                                     "x",
@@ -468,9 +655,9 @@ def build_config(filename):
                             "tag_name": "atomic_position",
                             "type": "table",
                             "default": "",
-                            "path": "",
+                            "path": '',
                             "xpath": "",
-                            "callback": "",
+                            "callback": '',
                             "kwargs": {
                                 "columns": [
                                     "element",
@@ -489,22 +676,44 @@ def build_config(filename):
                         {
                             "zh-name": "K点",
                             "tag_name": "K_point",
-                            "type": "uncheck-stringtype",
-                            "default": "",
-                            "path": "",
-                            "xpath": "",
-                            "callback": "",
-                            "kwargs": {}
-                        },
-                        {
-                            "zh-name": "k点折叠",
-                            "tag_name": "k_point_fold",
-                            "type": "uncheck-stringtype",
-                            "default": "",
-                            "path": "",
-                            "xpath": "",
-                            "callback": "",
-                            "kwargs": {}
+                            "type": "container",
+                            "children": [
+                                {
+                                    "zh-name": "K-Point-list",
+                                    "tag_name": "K_Point_list",
+                                    "type": "table",
+                                    "default": "",
+                                    "path": filename,
+                                    "xpath": ".//varray[@name='kpointlist']",
+                                    "callback": K_Point_list_callback,
+                                    "kwargs": {
+                                        "headless": True,
+                                        "columns": [
+                                            "x",
+                                            "y",
+                                            "z"
+                                        ],
+                                        "units": [
+                                            "",
+                                            "",
+                                            ""
+                                        ]
+                                        }
+                                    },
+                                
+                                {
+                                    "zh-name": "divisions",
+                                    "tag_name": "divisions",
+                                    "type": "uncheck-stringtype",
+                                    "default": "",
+                                    "path": filename,
+                                    "xpath": ".//generation/v[@name='divisions']",
+                                    "callback": "",
+                                    "kwargs": {
+                                        "headless": True
+                                    }
+                                },
+                            ],
                         }
                     ]
                 },
@@ -608,7 +817,7 @@ def build_config(filename):
                     "type": "table",
                     "default": "",
                     "path": filename,
-                    "xpath": ".//structure/crystal/varray[@name='basis']/v",
+                    "xpath": ".//structure/crystal/varray[@name='basis']",
                     "callback": optimized_unit_cell_parameters_callback,
                     "kwargs": {
                         "columns": [
@@ -651,9 +860,9 @@ def build_config(filename):
                     "tag_name": "The_total_volume_of_the_system",
                     "type": "uncheck-stringtype",
                     "default": "",
-                    "path": "",
-                    "xpath": "",
-                    "callback": "",
+                    "path": filename,
+                    "xpath": ".//crystal/i[@name='volume']",
+                    "callback": lambda l: l[-1].text if l else '',
                     "kwargs": {}
                 },
                 {
@@ -730,9 +939,9 @@ def build_config(filename):
                     "tag_name": "Fermi_energy",
                     "type": "uncheck-stringtype",
                     "default": "",
-                    "path": "",
-                    "xpath": "",
-                    "callback": "",
+                    "path": filename,
+                    "xpath": ".//dos/i[@name='efermi']",
+                    "callback": lambda l: l[-1] + 'eV' if l else '',
                     "kwargs": {}
                 },
                 {
@@ -740,9 +949,9 @@ def build_config(filename):
                     "tag_name": "total_system_energy",
                     "type": "uncheck-stringtype",
                     "default": "",
-                    "path": "",
-                    "xpath": "",
-                    "callback": "",
+                    "path": filename,
+                    "xpath": ".//energy/i[@name='e_fr_energy']",
+                    "callback": lambda l: l[-1].text + 'Ry' if l else '',
                     "kwargs": {}
                 },
                 {

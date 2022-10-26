@@ -10647,7 +10647,7 @@
    <v name="MAGDIPOLOUT">      0.00000000      0.00000000      0.00000000</v>
   </separator>
   <dos>
-   <i name="efermi">      8.35760626 </i>
+   <e_fr_energy>      8.35760626 </e_fr_energy>
    <total>
     <array>
      <dimension dim="1">gridpoints</dimension>

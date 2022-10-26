@@ -42,7 +42,11 @@ def create_dom_with_config(config_dict: dict, output_path: str):
             data = extract_xpath_from_file(xpath, path)
             if callback:
                 data = callback(data, **kwargs)
-        
+            elif len(data) == 1:
+                data = data[0].text
+            else:
+                data = [d.text for d in data]
+                
         data = data or default_value or ''
         
         if node_type == 'uncheck-stringtype':
