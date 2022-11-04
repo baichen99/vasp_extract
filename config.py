@@ -1,6 +1,9 @@
 from utils.callbacks import *
+import os
 
 def build_config(filename):
+    folder = os.path.split(filename)[0]
+    POSCAR = os.path.join(folder, 'POSCAR')
     return {
     "zh-name": "第一性原理数据",
     "tag_name": "firstprinciples_data",
@@ -120,196 +123,9 @@ def build_config(filename):
                             "default": "",
                             "path": filename,
                             "xpath": ".//separator/i[@name='NSW']",
-                            "callback": '',
-                            "kwargs": {}
-                        },
-                        {
-                            "zh-name": "SYSTEM",
-                            "tag_name": "SYSTEM",
-                            "type": "uncheck-stringtype",
-                            "default": "",
-                            "path": filename,
-                            "xpath": ".//incar/i[@name='SYSTEM']",
                             "callback": "",
                             "kwargs": {}
-                        },
-                        {
-                            "zh-name": "ISTART",
-                            "tag_name": "ISTART",
-                            "type": "uncheck-stringtype",
-                            "default": "",
-                            "path": filename,
-                            "xpath": ".//incar/i[@name='ISTART']",
-                            "callback": "",
-                            "kwargs": {}
-                        },
-                        {
-                            "zh-name": "PREC",
-                            "tag_name": "PREC",
-                            "type": "uncheck-stringtype",
-                            "default": "",
-                            "path": filename,
-                            "xpath": ".//incar/i[@name='PREC']",
-                            "callback": "",
-                            "kwargs": {}
-                        },
-                        {
-                            "zh-name": "ALGO",
-                            "tag_name": "ALGO",
-                            "type": "uncheck-stringtype",
-                            "default": "",
-                            "path": filename,
-                            "xpath": ".//incar/i[@name='ALGO']",
-                            "callback": "",
-                            "kwargs": {}
-                        },
-                        {
-                            "zh-name": "ISPIN",
-                            "tag_name": "ISPIN",
-                            "type": "uncheck-stringtype",
-                            "default": "",
-                            "path": filename,
-                            "xpath": ".//incar/i[@name='ISPIN']",
-                            "callback": "",
-                            "kwargs": {}
-                        },
-                        {
-                            "zh-name": "ICHARG",
-                            "tag_name": "ICHARG",
-                            "type": "uncheck-stringtype",
-                            "default": "",
-                            "path": filename,
-                            "xpath": ".//incar/i[@name='ICHARG']",
-                            "callback": "",
-                            "kwargs": {}
-                        },
-                        {
-                            "zh-name": "NELM",
-                            "tag_name": "NELM",
-                            "type": "uncheck-stringtype",
-                            "default": "",
-                            "path": filename,
-                            "xpath": ".//incar/i[@name='NELM']",
-                            "callback": "",
-                            "kwargs": {}
-                        },
-                        {
-                            "zh-name": "IBRION",
-                            "tag_name": "IBRION",
-                            "type": "uncheck-stringtype",
-                            "default": "",
-                            "path": filename,
-                            "xpath": ".//incar/i[@name='IBRION']",
-                            "callback": "",
-                            "kwargs": {}
-                        },
-                        {
-                            "zh-name": "EDIFF",
-                            "tag_name": "EDIFF",
-                            "type": "uncheck-stringtype",
-                            "default": "",
-                            "path": filename,
-                            "xpath": ".//incar/i[@name='EDIFF']",
-                            "callback": "",
-                            "kwargs": {}
-                        },
-                        {
-                            "zh-name": "EDIFFG",
-                            "tag_name": "EDIFFG",
-                            "type": "uncheck-stringtype",
-                            "default": "",
-                            "path": filename,
-                            "xpath": ".//incar/i[@name='EDIFFG']",
-                            "callback": "",
-                            "kwargs": {}
-                        },
-                        {
-                            "zh-name": "NSW",
-                            "tag_name": "NSW",
-                            "type": "uncheck-stringtype",
-                            "default": "",
-                            "path": filename,
-                            "xpath": ".//incar/i[@name='NSW']",
-                            "callback": "",
-                            "kwargs": {}
-                        },{
-                            "zh-name": "ISIF",
-                            "tag_name": "ISIF",
-                            "type": "uncheck-stringtype",
-                            "default": "",
-                            "path": filename,
-                            "xpath": ".//incar/i[@name='ISIF']",
-                            "callback": "",
-                            "kwargs": {}
-                        },{
-                            "zh-name": "ENCUT",
-                            "tag_name": "ENCUT",
-                            "type": "uncheck-stringtype",
-                            "default": "",
-                            "path": filename,
-                            "xpath": ".//incar/i[@name='ENCUT']",
-                            "callback": "",
-                            "kwargs": {}
-                        },{
-                            "zh-name": "POTIM",
-                            "tag_name": "POTIM",
-                            "type": "uncheck-stringtype",
-                            "default": "",
-                            "path": filename,
-                            "xpath": ".//incar/i[@name='POTIM']",
-                            "callback": "",
-                            "kwargs": {}
-                        },{
-                            "zh-name": "LREAL",
-                            "tag_name": "LREAL",
-                            "type": "uncheck-stringtype",
-                            "default": "",
-                            "path": filename,
-                            "xpath": ".//incar/i[@name='LREAL']",
-                            "callback": "",
-                            "kwargs": {}
-                        },
-                        {
-                            "zh-name": "ISMEAR",
-                            "tag_name": "ISMEAR",
-                            "type": "uncheck-stringtype",
-                            "default": "",
-                            "path": filename,
-                            "xpath": ".//incar/i[@name='ISMEAR']",
-                            "callback": "",
-                            "kwargs": {}
-                        },
-                        {
-                            "zh-name": "SIGMA",
-                            "tag_name": "SIGMA",
-                            "type": "uncheck-stringtype",
-                            "default": "",
-                            "path": filename,
-                            "xpath": ".//incar/i[@name='SIGMA']",
-                            "callback": "",
-                            "kwargs": {}
-                        },
-                        {
-                            "zh-name": "LWAVE",
-                            "tag_name": "LWAVE",
-                            "type": "uncheck-stringtype",
-                            "default": "",
-                            "path": filename,
-                            "xpath": ".//incar/i[@name='LWAVE']",
-                            "callback": "",
-                            "kwargs": {}
-                        },
-                        {
-                            "zh-name": "LCHARG",
-                            "tag_name": "LCHARG",
-                            "type": "uncheck-stringtype",
-                            "default": "",
-                            "path": filename,
-                            "xpath": ".//incar/i[@name='LCHARG']",
-                            "callback": "",
-                            "kwargs": {}
-                        },
-                        
+                        }
                     ]
                 },
                 {
@@ -322,7 +138,7 @@ def build_config(filename):
                             "tag_name": "Bravais_lattice",
                             "type": "uncheck-stringtype",
                             "default": "",
-                            "path": '',
+                            "path": "",
                             "xpath": "",
                             "callback": "",
                             "kwargs": {}
@@ -334,7 +150,7 @@ def build_config(filename):
                             "default": "",
                             "path": filename,
                             "xpath": ".//atominfo/atoms",
-                            "callback": '',
+                            "callback": "",
                             "kwargs": {}
                         },
                         {
@@ -344,7 +160,7 @@ def build_config(filename):
                             "default": "",
                             "path": filename,
                             "xpath": ".//atominfo/types",
-                            "callback": '',
+                            "callback": "",
                             "kwargs": {}
                         },
                         {
@@ -373,8 +189,8 @@ def build_config(filename):
                             "type": "uncheck-stringtype",
                             "default": "",
                             "path": filename,
-                            "xpath": ".//incar/ENCUT",
-                            "callback": '',
+                            "xpath": ".//incar/i[@name='ENCUT']",
+                            "callback": lambda l: l[0].text + 'eV' if l else '',
                             "kwargs": {}
                         },
                         {
@@ -441,7 +257,7 @@ def build_config(filename):
                             "default": "",
                             "path": filename,
                             "xpath": ".//incar/NELM",
-                            "callback": '',
+                            "callback": "",
                             "kwargs": {}
                         },
                         {
@@ -521,8 +337,8 @@ def build_config(filename):
                                     "tag_name": "truncation_criterion",
                                     "type": "uncheck-stringtype",
                                     "default": "",
-                                    "path": "",
-                                    "xpath": "",
+                                    "path": filename,
+                                    "xpath": ".//incar/i[@name='ENCUT']",
                                     "callback": "",
                                     "kwargs": {}
                                 }
@@ -597,8 +413,9 @@ def build_config(filename):
                             "tag_name": "Lattice_parameters",
                             "type": "table",
                             "default": "",
-                            "path": filename,
-                            "xpath": ".//structure[@name='primitive_cell']/crystal/varray[@name='basis']",
+                            "path": POSCAR,
+                            "xpath": "",
+                            "regex": "",
                             "callback": lattice_parameters_callback,
                             "kwargs": {
                                 "columns": [
@@ -625,9 +442,9 @@ def build_config(filename):
                             "tag_name": "Atomic_species",
                             "type": "uncheck-stringtype",
                             "default": "",
-                            "path": "",
-                            "xpath": "",
-                            "callback": "",
+                            "path": filename,
+                            "xpath": ".//array[@name='atomtypes']/set/rc",
+                            "callback": lambda l: ', '.join(list(set([rc[1].text for rc in l]))),
                             "kwargs": {}
                         },
                         {
@@ -635,9 +452,9 @@ def build_config(filename):
                             "tag_name": "relative_atomic_mass",
                             "type": "uncheck-stringtype",
                             "default": "",
-                            "path": "",
-                            "xpath": "",
-                            "callback": "",
+                            "path": filename,
+                            "xpath": ".//array[@name='atomtypes']/set/rc",
+                            "callback": lambda l: ', '.join(list(set([rc[2].text for rc in l]))),
                             "kwargs": {}
                         },
                         {
@@ -645,9 +462,9 @@ def build_config(filename):
                             "tag_name": "Atomic_pseudopotential",
                             "type": "uncheck-stringtype",
                             "default": "",
-                            "path": "",
-                            "xpath": "",
-                            "callback": "",
+                            "path": filename,
+                            "xpath": ".//array[@name='atomtypes']/set/rc",
+                            "callback": lambda l: ', '.join(list(set([rc[4].text for rc in l]))),
                             "kwargs": {}
                         },
                         {
@@ -655,9 +472,9 @@ def build_config(filename):
                             "tag_name": "atomic_position",
                             "type": "table",
                             "default": "",
-                            "path": '',
-                            "xpath": "",
-                            "callback": '',
+                            "path": POSCAR,
+                            "regex": "1",
+                            "callback": atomic_position_callback,
                             "kwargs": {
                                 "columns": [
                                     "element",
@@ -676,44 +493,22 @@ def build_config(filename):
                         {
                             "zh-name": "K点",
                             "tag_name": "K_point",
-                            "type": "container",
-                            "children": [
-                                {
-                                    "zh-name": "K-Point-list",
-                                    "tag_name": "K_Point_list",
-                                    "type": "table",
-                                    "default": "",
-                                    "path": filename,
-                                    "xpath": ".//varray[@name='kpointlist']",
-                                    "callback": K_Point_list_callback,
-                                    "kwargs": {
-                                        "headless": True,
-                                        "columns": [
-                                            "x",
-                                            "y",
-                                            "z"
-                                        ],
-                                        "units": [
-                                            "",
-                                            "",
-                                            ""
-                                        ]
-                                        }
-                                    },
-                                
-                                {
-                                    "zh-name": "divisions",
-                                    "tag_name": "divisions",
-                                    "type": "uncheck-stringtype",
-                                    "default": "",
-                                    "path": filename,
-                                    "xpath": ".//generation/v[@name='divisions']",
-                                    "callback": "",
-                                    "kwargs": {
-                                        "headless": True
-                                    }
-                                },
-                            ],
+                            "type": "uncheck-stringtype",
+                            "default": "",
+                            "path": "",
+                            "xpath": "",
+                            "callback": "",
+                            "kwargs": {}
+                        },
+                        {
+                            "zh-name": "k点折叠",
+                            "tag_name": "k_point_fold",
+                            "type": "uncheck-stringtype",
+                            "default": "",
+                            "path": "",
+                            "xpath": "",
+                            "callback": "",
+                            "kwargs": {}
                         }
                     ]
                 },
@@ -800,8 +595,8 @@ def build_config(filename):
                     "xpath": "",
                     "callback": "",
                     "kwargs": {
-                        "filenames": ['vasprun.xml'],
-                        "paths": ['vasprun.xml']
+                        "filenames": [],
+                        "paths": []
                     }
                 }
             ]
@@ -816,9 +611,9 @@ def build_config(filename):
                     "tag_name": "Optimized_unit_cell_parameters",
                     "type": "table",
                     "default": "",
-                    "path": filename,
-                    "xpath": ".//structure/crystal/varray[@name='basis']",
-                    "callback": optimized_unit_cell_parameters_callback,
+                    "path": "",
+                    "xpath": "",
+                    "callback": "",
                     "kwargs": {
                         "columns": [
                             "x",
@@ -862,7 +657,7 @@ def build_config(filename):
                     "default": "",
                     "path": filename,
                     "xpath": ".//crystal/i[@name='volume']",
-                    "callback": lambda l: l[-1].text if l else '',
+                    "callback": lambda l: l[-1].text + 'a.u.^3' if l else '',
                     "kwargs": {}
                 },
                 {
@@ -870,9 +665,9 @@ def build_config(filename):
                     "tag_name": "System_density",
                     "type": "uncheck-stringtype",
                     "default": "",
-                    "path": "",
-                    "xpath": "",
-                    "callback": "",
+                    "path": filename,
+                    "xpath": ".//dos/i[@name='efermi']",
+                    "callback": lambda l: l[-1].text + 'eV' if l else '',
                     "kwargs": {}
                 },
                 {
@@ -939,9 +734,9 @@ def build_config(filename):
                     "tag_name": "Fermi_energy",
                     "type": "uncheck-stringtype",
                     "default": "",
-                    "path": filename,
-                    "xpath": ".//dos/i[@name='efermi']",
-                    "callback": lambda l: l[-1] + 'eV' if l else '',
+                    "path": "",
+                    "xpath": "",
+                    "callback": "",
                     "kwargs": {}
                 },
                 {

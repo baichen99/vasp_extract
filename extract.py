@@ -3,6 +3,7 @@ from utils.createNodes import *
 import shutil
 import os
 import ipdb
+import re
 
 def create_dom_with_config(config_dict: dict, output_path: str):
     """
@@ -32,6 +33,7 @@ def create_dom_with_config(config_dict: dict, output_path: str):
         
         path = dict_node.get('path')
         xpath = dict_node.get('xpath')
+        regex = dict_node.get('regex')
         default_value = dict_node.get('default')
         callback = dict_node.get('callback')
         kwargs = dict_node.get('kwargs', {})
@@ -46,6 +48,13 @@ def create_dom_with_config(config_dict: dict, output_path: str):
                 data = data[0].text
             else:
                 data = [d.text for d in data]
+        elif regex and path:
+            with open(path, 'r', encoding='UTF-8') as f:
+                s = f.read()
+            # pattern = re.compile(regex)
+            # data = pattern.findall(s)
+            if callback:
+                data = callback(s, **kwargs)
                 
         data = data or default_value or ''
         
